@@ -20,8 +20,8 @@
     --input-color: hsl(var(--hue-color),70%,96%);
     --body-color:hsl(var(--hue-color),60%,99%) ;
     --container-color: #FFF;
-/*     --scroll-bar-color: hsl(var(--hue-color),69%,61%);
-    --scroll-thumb-color:hsl(var(--hue-color),69%,61%) ; */
+  --scroll-bar-color: hsl(var(--hue-color),69%,61%);
+    --scroll-thumb-color:hsl(var(--hue-color),69%,61%) ;
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -87,7 +87,7 @@ html {
 }
 
 body{
-    margin: 0 0 var(--header-height);
+    margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
@@ -186,18 +186,18 @@ img {
 @media screen and (max-width: 767px){
     .nav__menu{
         position: fixed;
-        bottom: 0;
+        bottom: -100%;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
+        padding: 2rem 1.5rem 4rem; 
         box-shadow: 0 -1px 4px rgba(0,0,0,15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
 }
 
-.nav-list{
+.nav__list{
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
 }
@@ -215,9 +215,24 @@ img {
     color: var(--first-color);
 }
 
+.nav__icon{
+    font-size: 1.2rem;;
+}
+
+.nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color-alt);
+
+}
 
 /* show menu */
-
+.show-menu{
+    bottom: 0;
+}
 
 /* Active link */
 

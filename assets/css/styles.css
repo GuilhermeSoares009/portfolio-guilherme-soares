@@ -936,14 +936,6 @@ img {
         margin-left: 3rem;
     }
 
-    .about__container{
-        column-gap: 5rem;
-    }
-
-    .about__img{
-        width: 350px;
-    }
-
     .about__description{
         text-align: initial;
     }

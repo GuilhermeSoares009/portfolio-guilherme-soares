@@ -161,9 +161,7 @@ img {
 }
 /*==================== LAYOUT ====================*/
 .container {
-    max-width: 768px; //887px
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    max-width: 935px; 
 }
 
 .grid{
@@ -326,6 +324,66 @@ img {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
+}
+
+@media (max-width: 900px)
+{
+    .skills {
+        flex-direction: column;
+        position: static;
+    }
+    .skills ul {
+        justify-content: center;
+    }
+    .container  {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+}
+
+@media screen and (max-width:567px) {
+
+    .home__content {
+    grid-template-columns: .0fr 1fr;
+    gap: 1rem;
+        height: auto;
+        text-align: center;
+    }
+
+}
+
+.skills {
+    align-items: center;
+    color: #767676;
+    display: flex;
+    font-size: 1.7rem;
+    margin-left: 1.1rem;
+}
+
+.skills p {
+    border-right: 2px solid rgba(45,46,50,.5);
+    color: #2d2e32;
+    font-family: Mulish,sans-serif;
+    font-weight: 600;
+    margin-right: 3rem;
+    padding-right: 2rem;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    list-style: none;
+}
+
+.skills ul li {
+    cursor: pointer;
+}
+
+.skills ul li img {
+    height: 5rem;
+    transition: all .3s ease-in-out;
+    width: 6rem;
 }
 
 .home__scroll{
@@ -805,10 +863,6 @@ img {
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media screen and (max-width:350px){
-    .container{
-        margin-left: var(--mb-1);
-        margin-right: var(--mb-1);
-    }
 
     .nav__menu{
         padding: 2rem .25rem 4rem;
@@ -917,11 +971,12 @@ img {
 
     .home__container{
         row-gap: 5rem;
+        position: relative;
     }
 
     .home__content{
         padding-top: 5.5rem;
-        column-gap: 2rem;
+        column-gap: 0rem;
     }
 
     .home__blob{
@@ -933,7 +988,7 @@ img {
     }
 
     .home__scroll-button{
-        margin-left: 3rem;
+        margin-left: 1rem;
     }
 
     .about__description{
